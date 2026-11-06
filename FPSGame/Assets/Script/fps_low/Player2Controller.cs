@@ -42,7 +42,7 @@ public class Player2Controller : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+        
 
         cameraTransform = Camera.main.transform;
 
@@ -66,7 +66,7 @@ public class Player2Controller : MonoBehaviour
         {
             fireTimer -= Time.deltaTime;
         }
-        if (Mouse.current != null && Mouse.current.leftButton.isPressed && fireTimer <= 0f)
+        if (Mouse.current != null && Mouse.current.rightButton.isPressed && fireTimer <= 0f)
         {
             Shoot();
             fireTimer = fireRate;
